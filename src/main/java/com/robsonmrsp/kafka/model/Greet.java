@@ -1,4 +1,4 @@
-package com.robsonmrsp.kafka.config;
+package com.robsonmrsp.kafka.model;
 
 import java.util.UUID;
 

@@ -1,4 +1,4 @@
-package com.robsonmrsp.kafka.config;
+package com.robsonmrsp.kafka.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -7,6 +7,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.robsonmrsp.kafka.controller.data.RequestGreeting;
+import com.robsonmrsp.kafka.controller.data.ResponseGreet;
+import com.robsonmrsp.kafka.model.Greet;
+import com.robsonmrsp.kafka.service.GreetingService;
+import com.robsonmrsp.kafka.utilities.Parser;
 
 @RestController
 @RequestMapping("/greetings")

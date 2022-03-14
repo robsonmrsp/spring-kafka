@@ -1,4 +1,8 @@
-package com.robsonmrsp.kafka.config;
+package com.robsonmrsp.kafka.utilities;
+
+import com.robsonmrsp.kafka.controller.data.RequestGreeting;
+import com.robsonmrsp.kafka.controller.data.ResponseGreet;
+import com.robsonmrsp.kafka.model.Greet;
 
 public class Parser {
 
