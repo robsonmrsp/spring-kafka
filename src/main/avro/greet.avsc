@@ -1,0 +1,15 @@
+
+{
+"fields": [
+    {
+        "name": "message",
+        "type": {
+            "avro.java.string": "String",
+            "type": "string"
+        }
+    }
+],
+"name": "Greet",
+"namespace": "com.robsonmrsp.kafka.avro",
+"type": "record"
+}
