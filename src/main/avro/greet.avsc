@@ -2,14 +2,28 @@
 {
 "fields": [
     {
+        "name": "id",
+        "type": {
+            "avro.java.string": "String",
+            "type": "string"
+        }
+    },
+    {
         "name": "message",
+        "type": {
+            "avro.java.string": "String",
+            "type": "string"
+        }
+    },
+    {
+        "name": "toWhom",
         "type": {
             "avro.java.string": "String",
             "type": "string"
         }
     }
 ],
-"name": "Greet",
+"name": "GreetEvent",
 "namespace": "com.robsonmrsp.kafka.avro",
 "type": "record"
 }
