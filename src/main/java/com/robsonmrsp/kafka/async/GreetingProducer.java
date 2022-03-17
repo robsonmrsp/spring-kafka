@@ -24,7 +24,7 @@ public class GreetingProducer {
 	private static final Logger LOGGER = LoggerFactory.getLogger(GreetingProducer.class);
 
 	@Autowired
-	KafkaTemplate<Integer, GreetEvent> kafkaTemplate;
+	KafkaTemplate<Integer, Object> kafkaTemplate;
 
 	public void send(Greet g) {
 		Integer key = new Random(new Date().getTime()).nextInt();
@@ -33,7 +33,7 @@ public class GreetingProducer {
 		String message = String.format("Bom dia %s-id[%s] %s!", g.getMessage(), g.getId().toString(), g.getToWhom());
 		LOGGER.info("Sending-> {}", message);
 
-		ListenableFuture<SendResult<Integer, GreetEvent>> send = kafkaTemplate.send(createMessageWithHeaders(key, event, "greeting-topic-avro"));
+		ListenableFuture<SendResult<Integer, Object>> send = kafkaTemplate.send(createMessageWithHeaders(key, event, "greeting-topic-avro"));
 		send.addCallback(a -> {
 			LOGGER.info("Sent: {}", a.getProducerRecord().topic());
 		}, b -> {
